@@ -743,20 +743,26 @@
                       method: 'POST',
                       headers: {
                         'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                       },
                       body: JSON.stringify(Object.fromEntries(formData))
                     });
 
+                    console.log('Response status:', response.status);
+
                     if (!response.ok) {
                       throw new Error(`HTTP error! status: ${response.status}`);
                     }
+
+                    const data = await response.json();
+                    console.log('Success:', data);
 
                     errorMessage.style.display = 'none';
                     successMessage.style.display = 'block';
                     this.reset();
 
                   } catch (error) {
-                    console.error('Error:', error);
+                    console.error('Error details:', error);
                     successMessage.style.display = 'none';
                     errorMessage.style.display = 'block';
                   }
