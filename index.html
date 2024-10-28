@@ -745,7 +745,7 @@
                   const urlEncodedData = new URLSearchParams(formData).toString(); // Convert to URL-encoded string
 
                   // Send the form data to the server
-                  fetch('fresh-back.vercel.app/submit-form', {
+                  fetch('/submit-form', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json'
