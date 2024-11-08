@@ -4280,6 +4280,7 @@ figcaption {
   background-color: var(--neutral--100);
   color: var(--accent--primary-1);
   border-radius: 16px;
+  margin-top: 20px;
 }
 
 .success-message.white-message._68px {
