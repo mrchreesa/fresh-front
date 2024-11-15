@@ -3686,7 +3686,7 @@ figcaption {
 }
 
 .section.hero-primary.hero-full-width-image-bottom {
-  padding-top: 60px;
+  padding-top: 5px !important;
   padding-bottom: 0;
 }
 
@@ -6671,7 +6671,7 @@ figcaption {
   }
 
   .section.hero-primary.hero-full-width-right, .section.hero-primary.hero-full-width-image-bottom, .section.top, .section.top.large {
-    padding-top: 64px;
+    padding-top: 5px;
   }
 
   .section.template-pages-hero {
@@ -7393,7 +7393,7 @@ figcaption {
   }
 
   .section.hero-primary, .section.hero-primary.hero-full-width-right, .section.hero-primary.hero-full-width-image-bottom, .section.top, .section.top.large {
-    padding-top: 48px;
+    padding-top: 5px;
   }
 
   .section.template-pages-hero {
