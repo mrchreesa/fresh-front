@@ -5,7 +5,7 @@ function createVideo(isMobile) {
     video.style = 'max-width: 300px; margin: auto; cursor: pointer;';
     video.controls = true;
     video.playsinline = true;
-    video.preload = 'metadata';
+    video.preload = 'none';
     
     // Add click handler for fullscreen
     video.addEventListener('click', function() {
@@ -57,4 +57,21 @@ document.getElementById('heroVideoMobilePlaceholder').addEventListener('click', 
         }
     });
     
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const overlay = document.querySelector('.play-overlay');
+  const video = document.querySelector('#myVideo');
+  
+  if (overlay && video) {
+    // Only handle the initial play click
+    overlay.addEventListener('click', function() {
+      overlay.classList.add('hidden');
+      video.play();
+      // Remove the overlay element entirely after animation completes
+      overlay.addEventListener('transitionend', function() {
+        overlay.remove();
+      }, { once: true });
+    });
+  }
 });
