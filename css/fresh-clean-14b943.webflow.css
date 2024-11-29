@@ -5486,6 +5486,41 @@ figcaption {
   padding-top: 0;
   font-style: italic;
 }
+.video-frame  {
+  border: 18px solid rgb(163, 166, 181);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 4px;
+  background: #2f2f2f;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+
+
+.video-frame::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 6px;
+  height: 6px;
+  background: #cc0000;
+  border-radius: 50%;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+
+.video-frame video {
+  border-radius: 4px;
+  border: 1px solid #1a1a1a;
+}
+
+.video-frame-mobile {
+  display: none; /* Hidden by default */
+  
+}
 
 @media screen and (min-width: 1440px) {
   .grid-2-columns.style---styleguide-wrapper {
@@ -5616,6 +5651,7 @@ figcaption {
   ul, ol {
     padding-left: 40px;
   }
+
 
   .grid-2-columns.style---styleguide-wrapper {
     grid-row-gap: 0px;
@@ -6058,7 +6094,7 @@ figcaption {
   .hero-full-width-right-container {
     width: 100%;
     max-width: 100%;
-    margin-top: 32px;
+    margin-top:0px;
     display: flex;
     position: static;
     inset: auto 0% 0%;
@@ -6072,6 +6108,9 @@ figcaption {
   .cta-card-image-left {
     padding: 88px 0 0;
   }
+  .video-frame {
+    left: 25% !important;
+  } 
 
   .accordion-item-wrapper {
     padding-left: 40px;
@@ -6088,6 +6127,7 @@ figcaption {
 
   .image.hero-full-width-right-image, .blog-card-image {
     width: 100%;
+  
   }
 
   .categories-badges-wrapper {
@@ -6196,7 +6236,9 @@ figcaption {
   .more-templates-badge-wrapper {
     right: 24px;
   }
+
 }
+
 
 @media screen and (max-width: 767px) {
   body {
@@ -6231,7 +6273,7 @@ figcaption {
     padding: 64px 32px;
     font-size: 20px;
   }
-
+ 
   .grid-2-columns {
     grid-template-columns: 1fr;
   }
@@ -6468,6 +6510,25 @@ figcaption {
 
   .inner-container._500px._100-mbl {
     max-width: 100%;
+  }
+ 
+  .video-frame-mobile {
+    display: block;
+      border: 18px solid rgb(163, 166, 181);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      padding: 4px;
+      margin-top: 40px;
+      background: #2f2f2f;
+      width: fit-content;
+      height: fit-content;
+      position: relative;
+    
+  }
+
+  /* Hide the regular video container on mobile */
+  .video-container {
+    display: none;
   }
 
   .style---content-heading {
@@ -7104,6 +7165,8 @@ figcaption {
     padding-right: 12px;
   }
 
+  
+
   .card.services.maintanence.mm.dsds {
     background-image: url('../images/circle-scatter-3.svg');
   }
@@ -7364,6 +7427,9 @@ figcaption {
   }
 
   .container-default {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-left: 16px;
     padding-right: 16px;
   }
