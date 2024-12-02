@@ -727,6 +727,12 @@
               <form id="wf-form-Home-contact-form" name="wf-form-Home-contact-form" data-name="Home contact form"
                 method="POST" data-wf-page-id="66f55df45e79c60b1a95f2a6"
                 data-wf-element-id="7f1810ef-d480-fc84-f029-1710ace1b281">
+                <!-- Add honeypot field -->
+                <div class="honeypot-field" style="display:none !important;">
+                  <label for="website">Website</label>
+                  <input name="website" type="text" id="website" autocomplete="off">
+                </div>
+
                 <div class="w-layout-grid grid-2-columns form">
                   <div><label for="Name">Full name</label><input class="input w-input" maxlength="256" name="Name"
                       data-name="Name" placeholder="" type="text" id="Name" required=""></div>
@@ -766,6 +772,16 @@
                     border-top: 4px solid #3498db;
                     border-radius: 50%;
                     animation: spin 1s linear infinite;
+                  }
+
+                  .honeypot-field {
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 0;
+                    width: 0;
+                    z-index: -1;
                   }
 
                   @keyframes spin {
