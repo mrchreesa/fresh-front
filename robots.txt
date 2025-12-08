@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# AI Crawlers - Allow for LLM SEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.freshandclean.co.uk/sitemap.xml
