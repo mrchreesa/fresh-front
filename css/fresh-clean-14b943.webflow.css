@@ -4307,6 +4307,26 @@ figcaption {
 	padding-bottom: 32px;
 }
 
+.footer-credit {
+	white-space: nowrap;
+}
+
+.footer-credit-link {
+	color: var(--neutral--800);
+	text-underline-offset: 3px;
+	transition: none;
+}
+
+.footer-credit-link:hover,
+.footer-credit-link:active {
+	text-decoration-thickness: 2px;
+}
+
+.footer-credit-link:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 4px;
+}
+
 .success-message {
 	background-color: var(--accent--primary-1);
 	color: var(--neutral--100);
