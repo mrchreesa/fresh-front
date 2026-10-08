@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    window.WebM8Analytics?.form('cleaning_enquiry', 'step_complete');
+    window.WebM8Analytics?.form('cleaning_enquiry', 'submit');
 
     const formData = new FormData(this);
     const submitButton = this.querySelector('input[type="submit"]');
@@ -47,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       await response.json();
-      
+      window.WebM8Analytics?.form('cleaning_enquiry', 'success');
+
       // Success state
       hideAllMessages();
       formCard.style.opacity = '1';
@@ -55,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.reset();
 
     } catch (error) {
+      window.WebM8Analytics?.form('cleaning_enquiry', 'submission_error', { code: 'unknown' });
       console.error('Error details:', error);
       // Error state
       hideAllMessages();
@@ -66,4 +70,4 @@ document.addEventListener('DOMContentLoaded', function() {
       submitButton.disabled = false;
     }
   });
-}); 
+});

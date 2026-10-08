@@ -240,7 +240,7 @@
               <div class="hamburger-menu-bar top"></div>
               <div class="hamburger-menu-bar bottom"></div>
             </div>
-            <a href="#free-quote" class="btn-primary small header-btn-hidde-on-mb w-button">Get a free quote</a>
+            <a href="#free-quote" data-analytics-id="request-quote" class="btn-primary small header-btn-hidde-on-mb w-button">Get a free quote</a>
           </div>
         </div>
       </div>
@@ -259,7 +259,7 @@
               </div>
             </div>
             <div class="buttons-row">
-              <a href="#free-quote" class="btn-primary button-row w-button">Get a free quote</a>
+              <a href="#free-quote" data-analytics-id="request-quote" class="btn-primary button-row w-button">Get a free quote</a>
               <a href="tel:+447591802824" class="link call-us w-inline-block"><img
                   src="images/phone-icon-big-cleaning-webflow-ecommerce-template.svg" loading="eager"
                   alt="Phone icon - Call us now" class="icon call-us-now-icon">
@@ -371,7 +371,7 @@
       </div>
     </div>
     <div class="section large _121">
-      <div id="services" class="container-default w-container">
+      <div data-analytics-section="services" id="services" class="container-default w-container">
         <div data-w-id="7f9749de-e5e9-fb0d-0daf-ba9f0b80b485"
           style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
           class="grid-2-columns mg-bottom-48px new">
@@ -735,7 +735,7 @@
       </div>
     </div>
     <div class="w-layout-blockcontainer container w-container"></div>
-    <div id="about" class="section large _15">
+    <div data-analytics-section="about" id="about" class="section large _15">
       <div class="container-default w-container">
         <div data-w-id="f49ac3d7-26f3-39be-f1b5-56b939c43368"
           style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
@@ -843,13 +843,13 @@
                 </div>
               </div>
             </div>
-            <a href="#free-quote" class="btn-primary w-button">Get a free quote</a>
+            <a href="#free-quote" data-analytics-id="request-quote" class="btn-primary w-button">Get a free quote</a>
           </div>
         </div>
 
       </div>
     </div>
-    <div id="free-quote" class="section large bg-neutral-200">
+    <div data-analytics-section="free-quote" id="free-quote" class="section large bg-neutral-200">
       <div id="free-quote" class="container-default w-container">
         <div class="w-layout-grid grid-2-columns form-right">
           <div data-w-id="7f1810ef-d480-fc84-f029-1710ace1b265"
@@ -870,7 +870,7 @@
           </div>
           <div data-w-id="7f1810ef-d480-fc84-f029-1710ace1b27f" style="opacity:0">
             <div class="card form w-form">
-              <form id="wf-form-Home-contact-form" name="wf-form-Home-contact-form" data-name="Home contact form"
+              <form data-analytics-form="cleaning_enquiry" id="wf-form-Home-contact-form" name="wf-form-Home-contact-form" data-name="Home contact form"
                 method="POST" data-wf-page-id="66f55df45e79c60b1a95f2a6"
                 data-wf-element-id="7f1810ef-d480-fc84-f029-1710ace1b281">
                 <!-- Add honeypot field -->
@@ -1001,7 +1001,7 @@
               <a href="tel:+447591802824" class="display-4 link">07591 802824</a>
               <p class="mg-bottom-24px">Contact us today for a free, no-obligation estimate and let us bring new life to
                 your carpets!</p>
-              <a href="#free-quote" class="btn-primary dsda w-button">Request a free quote</a>
+              <a href="#free-quote" data-analytics-id="request-quote" class="btn-primary dsda w-button">Request a free quote</a>
             </div>
           </div>
         </div>
@@ -1024,6 +1024,7 @@
   <script src="js/webflow.js" type="text/javascript"></script>
   <script src="js/form-handler.js" type="text/javascript"></script>
   <script src="js/video-handler.js" type="text/javascript"></script>
+<script defer src="https://webm8-platform.vercel.app/site-analytics.js" data-site="2e74f359-2e31-4ecb-9e87-281ceebdc7c8" data-paths="/,/index.html"></script>
 </body>
 
 </html>
